@@ -6,8 +6,10 @@ It can handle file concatenation but not minification. Files are then passed dow
 
 Usage The following example will parse the build blocks in the HTML, replace them and pass those files through. Assets inside the build blocks will be concatenated and passed through in a stream as well.
 
-```
-<!-- build:<type>(alternate search path) <path> <parameters> --> ... HTML Markup, list of script / link tags. <!-- endbuild -->
+```html
+<!-- build:<type>(alternate search path) <path> <parameters> -->
+... HTML Markup, list of script / link tags.
+<!-- endbuild -->
 
 ```
 
@@ -23,7 +25,7 @@ Usage The following example will parse the build blocks in the HTML, replace the
 
 An example of this in completed form can be seen below:
 
-```
+```html
 
 <!-- build:css css/combined.css -->
 <link href="css/one.css" rel="stylesheet">
@@ -42,7 +44,7 @@ An example of this in completed form can be seen below:
 
 ### The resulting HTML would be:
 
-```
+```html
 
 <link rel="stylesheet" href="css/combined.css">
 <script src="scripts/combined.js">
